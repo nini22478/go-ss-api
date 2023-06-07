@@ -35,7 +35,7 @@ func AddUser(c *gin.Context) {
 	}
 	socket, err := net.DialUDP("udp", nil, &net.UDPAddr{
 		IP:   net.IPv4(127, 0, 0, 1),
-		Port: 88,
+		Port: 8088,
 	})
 	if err != nil {
 		c.JSON(200, gin.H{
@@ -87,7 +87,7 @@ func DelUser(c *gin.Context) {
 	}
 	socket, err := net.DialUDP("udp", nil, &net.UDPAddr{
 		IP:   net.IPv4(127, 0, 0, 1),
-		Port: 88,
+		Port: 8088,
 	})
 	if err != nil {
 		fmt.Println("连接服务端失败，err:", err)
@@ -118,7 +118,7 @@ func AllUser(c *gin.Context) {
 
 	socket, err := net.DialUDP("udp", nil, &net.UDPAddr{
 		IP:   net.IPv4(127, 0, 0, 1),
-		Port: 88,
+		Port: 8088,
 	})
 	if err != nil {
 		fmt.Println("连接服务端失败，err:", err)
@@ -149,7 +149,7 @@ func Ping(c *gin.Context) {
 
 	socket, err := net.DialUDP("udp", nil, &net.UDPAddr{
 		IP:   net.IPv4(127, 0, 0, 1),
-		Port: 88,
+		Port: 8088,
 	})
 	if err != nil {
 		fmt.Println("连接服务端失败，err:", err)
