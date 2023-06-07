@@ -77,9 +77,9 @@ func AddUser(c *gin.Context) {
 
 func DelUser(c *gin.Context) {
 	port := c.PostForm("port")
-
+	ports, _ := strconv.Atoi(port)
 	datas := map[string]interface{}{
-		"server_port": port,
+		"server_port": ports,
 	}
 
 	jsonData, err := json.Marshal(datas)
