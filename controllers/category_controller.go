@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,9 +20,9 @@ func ErrorPage(c *gin.Context) {
 func AddUser(c *gin.Context) {
 	port := c.PostForm("port")
 	passwd := c.PostForm("passwd")
-
+	ports, _ := strconv.Atoi(port)
 	datas := map[string]interface{}{
-		"server_port": port,
+		"server_port": ports,
 		"password":    passwd,
 	}
 
