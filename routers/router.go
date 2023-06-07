@@ -12,11 +12,11 @@ func InitRouter() *gin.Engine {
 	router := gin.Default()
 	//router.Use(cors.Default())
 	router.Use(Cors())
-	router.GET("/error", controllers.ErrorPage)
-	router.GET("/addUser", controllers.AddUser)
-	router.GET("/delUser", controllers.DelUser)
-	router.GET("/allUser", controllers.AllUser)
-	router.GET("/Ping", controllers.Ping)
+	router.POST("/error", controllers.ErrorPage)
+	router.POST("/addUser", controllers.AddUser)
+	router.POST("/delUser", controllers.DelUser)
+	router.POST("/allUser", controllers.AllUser)
+	router.POST("/Ping", controllers.Ping)
 	return router
 
 }
